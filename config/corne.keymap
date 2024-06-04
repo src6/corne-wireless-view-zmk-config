@@ -37,6 +37,43 @@
         };
     };
 
+    macros {
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C)>;
+            label = "COPY";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V)>;
+            label = "PASTE";
+        };
+
+        cut: cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(X)>;
+            label = "CUT";
+        };
+
+        undo: undo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Z)>;
+            label = "UNDO";
+        };
+
+        redo: redo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Y)>;
+            label = "REDO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,10 +86,10 @@
 
             display-name = "ALPHA";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F         &kp P  &kp B        &kp J    &kp L            &kp U      &kp Y    &kp SEMICOLON  &kp ESCAPE
-&kp LCTRL  &kp A  &kp R  &kp S         &kp T  &kp G        &kp M    &kp N            &kp E      &kp I    &kp O          &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp D  &kp V        &kp K    &kp H            &kp COMMA  &kp DOT  &kp FSLH       &key_repeat
-                         &kp LEFT_ALT  &mo 1  &kp SPACE    &kp RET  &lt 0 BACKSPACE  &kp DEL
+&kp ESCAPE  &kp Q            &kp W            &kp F                &kp P              &kp B        &kp J        &kp L               &kp U                 &kp Y             &kp SEMICOLON  &kp LA(TAB)
+&kp LCTRL   &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G        &kp M        &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RGUI O    &kp SQT
+&kp LSHFT   &kp Z            &kp X            &kp C                &kp D              &kp V        &kp K        &kp H               &kp COMMA             &kp DOT           &kp FSLH       &key_repeat
+                                              &lt 2 TAB            &mo 1              &kp SPACE    &lt 5 ENTER  &lt 4 BACKSPACE     &lt 3 DEL
             >;
         };
 
@@ -65,7 +102,7 @@
 
             display-name = "NAV";
             bindings = <
-&trans  &trans    &trans    &trans            &trans          &trans       &trans        &trans          &trans          &trans        &trans           &trans
+&trans  &trans    &trans    &trans            &trans          &trans       &redo         &paste          &copy           &cut          &undo            &trans
 &trans  &kp LGUI  &kp LALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans       &kp CAPSLOCK  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
 &trans  &trans    &trans    &trans            &trans          &trans       &kp INSERT    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
                             &trans            &trans          &kp SPACE    &kp RET       &kp BACKSPACE   &kp DEL
