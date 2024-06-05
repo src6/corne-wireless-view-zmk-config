@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     behaviors {
@@ -102,10 +103,10 @@
 
             display-name = "NAV";
             bindings = <
-&trans  &trans    &trans    &trans            &trans          &trans       &redo         &paste          &copy           &cut          &undo            &trans
-&trans  &kp LGUI  &kp LALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans       &kp CAPSLOCK  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &trans    &trans    &trans            &trans          &trans       &kp INSERT    &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
-                            &trans            &trans          &kp SPACE    &kp RET       &kp BACKSPACE   &kp DEL
+&trans  &trans    &trans    &trans            &trans          &trans       &redo       &paste          &copy           &cut          &undo            &trans
+&trans  &kp LGUI  &kp LALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans       &kt CAPS    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans    &trans    &trans            &trans          &trans       &kp INSERT  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
+                            &trans            &trans          &kp SPACE    &kp RET     &kp BACKSPACE   &kp DEL
             >;
         };
 
