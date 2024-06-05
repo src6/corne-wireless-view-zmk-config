@@ -1,1 +1,1 @@
-#<img src="./my_keymap.svg">
+<img src="./my_keymap.svg">
