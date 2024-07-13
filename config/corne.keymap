@@ -75,6 +75,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        capsword {
+            bindings = <&caps_word>;
+            key-positions = <28 31>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -87,10 +96,10 @@
 
             display-name = "ALPHA";
             bindings = <
-&kp ESCAPE  &kp Q            &kp W            &kp F                &kp P              &kp B      &kp J        &kp L               &kp U                 &kp Y             &kp SEMICOLON  &kp LA(TAB)
-&kp LCTRL   &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G      &kp M        &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RGUI O    &kp SQT
-&kp LSHFT   &kp Z            &kp X            &kp C                &kp D              &kp V      &kp K        &kp H               &kp COMMA             &kp DOT           &kp FSLH       &key_repeat
-                                              &lt 2 ESCAPE         &lt 1 SPACE        &kp TAB    &lt 5 ENTER  &lt 4 BACKSPACE     &lt 3 DEL
+&kp ESCAPE    &kp Q            &kp W            &kp F                &kp P              &kp B      &kp J        &kp L               &kp U                 &kp Y             &kp SEMICOLON  &kp PRINTSCREEN
+&kt CAPSLOCK  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G      &kp M        &hmr RIGHT_SHIFT N  &hmr RIGHT_CONTROL E  &hmr RIGHT_ALT I  &hmr RGUI O    &kp SQT
+&key_repeat   &kp Z            &kp X            &kp C                &kp D              &kp V      &kp K        &kp H               &kp COMMA             &kp DOT           &kp FSLH       &key_repeat
+                                                &lt 2 ESCAPE         &lt 1 SPACE        &kp TAB    &lt 5 ENTER  &lt 4 BACKSPACE     &lt 3 DEL
             >;
         };
 
